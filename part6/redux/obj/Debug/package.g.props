@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">part6.client</PackageJsonName>
+    <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.0.0</PackageJsonVersion>
+    <PackageJsonType Condition="$(PackageJsonType) == ''">module</PackageJsonType>
+    <PackageJsonScriptsDev Condition="$(PackageJsonScriptsDev) == ''">vite</PackageJsonScriptsDev>
+    <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">vite build</PackageJsonScriptsBuild>
+    <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
+    <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
+    <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">jest</PackageJsonScriptsTest>
+    <PackageJsonDependenciesReduxjsToolkit Condition="$(PackageJsonDependenciesReduxjsToolkit) == ''">^2.6.0</PackageJsonDependenciesReduxjsToolkit>
+    <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.0.0</PackageJsonDependenciesReact>
+    <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.0.0</PackageJsonDependenciesReactDom>
+    <PackageJsonDependenciesReactRedux Condition="$(PackageJsonDependenciesReactRedux) == ''">^9.2.0</PackageJsonDependenciesReactRedux>
+    <PackageJsonDependenciesRedux Condition="$(PackageJsonDependenciesRedux) == ''">^5.0.1</PackageJsonDependenciesRedux>
+    <PackageJsonDevdependenciesBabelPresetEnv Condition="$(PackageJsonDevdependenciesBabelPresetEnv) == ''">^7.26.9</PackageJsonDevdependenciesBabelPresetEnv>
+    <PackageJsonDevdependenciesBabelPresetReact Condition="$(PackageJsonDevdependenciesBabelPresetReact) == ''">^7.26.3</PackageJsonDevdependenciesBabelPresetReact>
+    <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.21.0</PackageJsonDevdependenciesEslintJs>
+    <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^19.0.10</PackageJsonDevdependenciesTypesReact>
+    <PackageJsonDevdependenciesTypesReactDom Condition="$(PackageJsonDevdependenciesTypesReactDom) == ''">^19.0.4</PackageJsonDevdependenciesTypesReactDom>
+    <PackageJsonDevdependenciesVitejsPluginReact Condition="$(PackageJsonDevdependenciesVitejsPluginReact) == ''">^4.3.4</PackageJsonDevdependenciesVitejsPluginReact>
+    <PackageJsonDevdependenciesDeepFreeze Condition="$(PackageJsonDevdependenciesDeepFreeze) == ''">^0.0.1</PackageJsonDevdependenciesDeepFreeze>
+    <PackageJsonDevdependenciesEslint Condition="$(PackageJsonDevdependenciesEslint) == ''">^9.21.0</PackageJsonDevdependenciesEslint>
+    <PackageJsonDevdependenciesEslintPluginJest Condition="$(PackageJsonDevdependenciesEslintPluginJest) == ''">^28.11.0</PackageJsonDevdependenciesEslintPluginJest>
+    <PackageJsonDevdependenciesEslintPluginReactHooks Condition="$(PackageJsonDevdependenciesEslintPluginReactHooks) == ''">^5.1.0</PackageJsonDevdependenciesEslintPluginReactHooks>
+    <PackageJsonDevdependenciesEslintPluginReactRefresh Condition="$(PackageJsonDevdependenciesEslintPluginReactRefresh) == ''">^0.4.19</PackageJsonDevdependenciesEslintPluginReactRefresh>
+    <PackageJsonDevdependenciesGlobals Condition="$(PackageJsonDevdependenciesGlobals) == ''">^15.15.0</PackageJsonDevdependenciesGlobals>
+    <PackageJsonDevdependenciesJest Condition="$(PackageJsonDevdependenciesJest) == ''">^29.7.0</PackageJsonDevdependenciesJest>
+    <PackageJsonDevdependenciesVite Condition="$(PackageJsonDevdependenciesVite) == ''">^6.2.0</PackageJsonDevdependenciesVite>
+  </PropertyGroup>
+</Project>
