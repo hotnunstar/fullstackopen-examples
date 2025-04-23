@@ -27,41 +27,48 @@ let persons = [
 ]
 
 const typeDefs = `
-    type Address {
-        street: String!
-        city: String! 
-    }
+  type Address {
+    street: String!
+    city: String! 
+  }
 
-    type Person {
-        name: String!
-        phone: String
-        address: Address!
-        id: ID!
-    }
+  enum YesNo {
+    YES
+    NO
+  }
+  
+  type Query {
+    personCount: Int!
+    allPersons(phone: YesNo): [Person!]!
+    findPerson(name: String!): Person
+  }
 
-	enum YesNo {
-		YES
-		NO
-	}
+  type Person {
+    name: String!
+    phone: String
+    address: Address!
+    id: ID!
+  }
 
-    type Query {
-        personCount: Int!
-        allPersons(phone: YesNo): [Person!]!
-        findPerson(name: String!): Person
-    }
+  type Query {
+    personCount: Int!
+    allPersons: [Person!]!
+    findPerson(name: String!): Person
+  }
 
-    type Mutation {
-        addPerson(
-            name: String!
-            phone: String
-            street: String!
-            city: String!
-        ) : Person
-		editNumber(
-    		name: String!
-    		phone: String!
-  		) : Person 
-    }
+  type Mutation {
+    addPerson(
+      name: String!
+      phone: String
+      street: String!
+      city: String!
+    ): Person
+
+    editNumber(
+      name: String!
+      phone: String!
+    ): Person
+  }
 `
 
 const resolvers = {
@@ -77,10 +84,10 @@ const resolvers = {
 		findPerson: (root, args) => persons.find((p) => p.name === args.name),
 	},
 	Person: {
-		address: (root) => {
+		address: ({ street, city }) => {
 			return {
-				street: root.street,
-				city: root.city,
+				street,
+				city,
 			}
 		},
 	},
@@ -100,7 +107,9 @@ const resolvers = {
 		},
 		editNumber: (root, args) => {
 			const person = persons.find((p) => p.name === args.name)
-			if (!person) return null
+			if (!person) {
+				return null
+			}
 
 			const updatedPerson = { ...person, phone: args.phone }
 			persons = persons.map((p) => (p.name === args.name ? updatedPerson : p))
