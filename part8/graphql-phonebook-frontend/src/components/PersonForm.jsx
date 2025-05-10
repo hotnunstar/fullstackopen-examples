@@ -14,12 +14,13 @@ const PersonForm = ({ setError }) => {
         onError: (error) => {
             const messages = error.graphQLErrors.map(e => e.message).join('\n')
             setError(messages)
-          }
+        }
     })
 
     const submit = async (event) => {
         event.preventDefault()
         createPerson({ variables: { name, phone, street, city } })
+        
         setName('')
         setPhone('')
         setStreet('')
