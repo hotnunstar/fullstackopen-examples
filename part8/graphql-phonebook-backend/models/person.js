@@ -1,17 +1,31 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-	username: {
-		type: String,
-		required: true,
-		minlength: 3,
-	},
-	friends: [
-		{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Person',
-		},
-	],
+  name: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
+  phone: {
+    type: String,
+    minlength: 5
+  },
+  street: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
+  city: {
+    type: String,
+    required: true,
+    minlength: 3
+  },
+  friendOf: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    }
+  ],
 })
 
-module.exports = mongoose.model('User', schema)
+module.exports = mongoose.model('Person', schema)
